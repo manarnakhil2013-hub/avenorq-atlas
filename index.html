@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AvenorQ Atlas — Interactive Osteology</title>
+<meta name="description" content="Interactive 3D anatomy atlas of the upper and lower limb bones, built for first-year medical students.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg class="bg-watermark" viewBox="0 0 800 900" aria-hidden="true">
+  <path d="M400 40 C 260 40 150 120 120 260 C 100 350 130 420 180 470 C 140 520 120 590 150 660 C 180 740 260 800 360 830 L 400 860 L 440 830 C 540 800 620 740 650 660 C 680 590 660 520 620 470 C 670 420 700 350 680 260 C 650 120 540 40 400 40 Z" />
+  <path class="spine-line" d="M180 470 C 300 430 500 430 620 470" />
+</svg>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 60 60"><path d="M30 4 C16 4 6 16 6 30 C6 40 12 47 19 51 C15 56 13 62 15 68 C18 74 26 78 30 80 C34 78 42 74 45 68 C47 62 45 56 41 51 C48 47 54 40 54 30 C54 16 44 4 30 4 Z"/></svg>
+      </span>
+      <div class="brand-text">
+        <span class="brand-title">AvenorQ Atlas</span>
+        <span class="brand-sub">SMART MEDICINE · BETTER FUTURE</span>
+      </div>
+    </div>
+    <p class="header-tagline">Interactive 3D osteology atlas — upper &amp; lower limb.</p>
+  </div>
+  <div class="ridge"></div>
+</header>
+
+<main>
+
+  <section class="hub-hero">
+    <h1>Explore the Limb Skeleton</h1>
+    <p>Select a bone to open its dedicated 3D atlas: interactive structures, clinical pearls, and a progressive quiz — content curated for first-year medical students.</p>
+  </section>
+
+  <!-- ============ UPPER LIMB ============ -->
+  <section class="limb-section" aria-label="Upper limb bones">
+    <div class="limb-heading">
+      <h2>🦴 Upper Limb — Membrum Superius</h2>
+      <span class="count">8 bones</span>
+    </div>
+    <div class="bone-grid">
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Clavicle</p>
+        <p class="bone-card-latin">Clavicula</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <a class="bone-card" href="bones/scapula/index.html">
+        <p class="bone-card-name">Scapula</p>
+        <p class="bone-card-latin">Scapula</p>
+        <span class="bone-card-status status-ready">Available</span>
+      </a>
+
+      <a class="bone-card" href="bones/humerus/index.html">
+        <p class="bone-card-name">Humerus</p>
+        <p class="bone-card-latin">Humerus</p>
+        <span class="bone-card-status status-ready">Available</span>
+      </a>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Radius</p>
+        <p class="bone-card-latin">Radius</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Ulna</p>
+        <p class="bone-card-latin">Ulna</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Carpal Bones</p>
+        <p class="bone-card-latin">Ossa Carpi (×8)</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Metacarpal Bones</p>
+        <p class="bone-card-latin">Ossa Metacarpi (×5)</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Phalanges of the Hand</p>
+        <p class="bone-card-latin">Phalanges Manus (×14)</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ LOWER LIMB ============ -->
+  <section class="limb-section" aria-label="Lower limb bones">
+    <div class="limb-heading">
+      <h2>🦵 Lower Limb — Membrum Inferius</h2>
+      <span class="count">8 bones</span>
+    </div>
+    <div class="bone-grid">
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Hip Bone</p>
+        <p class="bone-card-latin">Os Coxae</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Femur</p>
+        <p class="bone-card-latin">Femur</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Patella</p>
+        <p class="bone-card-latin">Patella</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Tibia</p>
+        <p class="bone-card-latin">Tibia</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Fibula</p>
+        <p class="bone-card-latin">Fibula</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Tarsal Bones</p>
+        <p class="bone-card-latin">Ossa Tarsi (×7)</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Metatarsal Bones</p>
+        <p class="bone-card-latin">Ossa Metatarsi (×5)</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+      <div class="bone-card locked">
+        <p class="bone-card-name">Phalanges of the Foot</p>
+        <p class="bone-card-latin">Phalanges Pedis (×14)</p>
+        <span class="bone-card-status status-soon">Coming soon</span>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>AvenorQ Atlas</p>
+</footer>
+
+</body>
+</html>
