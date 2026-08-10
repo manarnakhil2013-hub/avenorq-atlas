@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Humerus — AvenorQ Atlas</title>
+<meta name="description" content="Interactive 3D atlas of the humerus, with clinical pearls and a progressive quiz.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<svg class="bg-watermark" viewBox="0 0 800 900" aria-hidden="true">
+  <path d="M400 40 C 260 40 150 120 120 260 C 100 350 130 420 180 470 C 140 520 120 590 150 660 C 180 740 260 800 360 830 L 400 860 L 440 830 C 540 800 620 740 650 660 C 680 590 660 520 620 470 C 670 420 700 350 680 260 C 650 120 540 40 400 40 Z" />
+  <path class="spine-line" d="M180 470 C 300 430 500 430 620 470" />
+</svg>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 60 60"><path d="M30 4 C16 4 6 16 6 30 C6 40 12 47 19 51 C15 56 13 62 15 68 C18 74 26 78 30 80 C34 78 42 74 45 68 C47 62 45 56 41 51 C48 47 54 40 54 30 C54 16 44 4 30 4 Z"/></svg>
+      </span>
+      <div class="brand-text">
+        <span class="brand-title">AvenorQ Atlas</span>
+        <span class="brand-sub">HUMERUS · SHAFT · EPICONDYLES</span>
+      </div>
+    </a>
+    <a class="back-link" href="../../index.html">← Back to all bones</a>
+  </div>
+  <div class="ridge"></div>
+</header>
+
+<main>
+
+  <section class="atlas-section" aria-label="Anatomical explorer">
+    <div class="atlas-grid">
+
+      <nav class="process-rail" aria-label="List of anatomical structures">
+        <h2 class="rail-title">Structures</h2>
+        <ul id="structureList" class="process-list"></ul>
+      </nav>
+
+      <div class="fossa-panel">
+        <div class="viewer-frame">
+          <div class="sketchfab-embed-wrapper">
+            <iframe title="Human humerus" frameborder="0" allowfullscreen
+              mozallowfullscreen="true" webkitallowfullscreen="true"
+              allow="autoplay; fullscreen; xr-spatial-tracking"
+              xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+              src="https://sketchfab.com/models/367fade2e5cb45fea2502faddff64f5f/embed">
+            </iframe>
+          </div>
+          <p class="sketchfab-credit">
+            <a href="https://sketchfab.com/3d-models/human-humerus-367fade2e5cb45fea2502faddff64f5f?utm_medium=embed&utm_campaign=share-popup&utm_content=367fade2e5cb45fea2502faddff64f5f" target="_blank" rel="nofollow">Human humerus</a>
+            by
+            <a href="https://sketchfab.com/ebauer4?utm_medium=embed&utm_campaign=share-popup&utm_content=367fade2e5cb45fea2502faddff64f5f" target="_blank" rel="nofollow">Eric Bauer</a>
+            on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=367fade2e5cb45fea2502faddff64f5f" target="_blank" rel="nofollow">Sketchfab</a>
+          </p>
+        </div>
+
+        <div class="description-card" id="descriptionCard">
+          <span class="desc-eyebrow" id="descEyebrow">Selected structure</span>
+          <h3 class="desc-title" id="descTitle">Select a structure to begin</h3>
+          <p class="desc-body" id="descBody">The humerus is the single long bone of the arm, articulating with the scapula above at the glenohumeral joint and with the radius and ulna below at the elbow.</p>
+          <div class="pearl-box" id="pearlBox" hidden>
+            <span class="pearl-label">🩺 Clinical Pearl</span>
+            <p class="pearl-text" id="pearlText"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="quiz-section" aria-label="Quiz mode">
+    <div class="quiz-card">
+      <div class="quiz-head">
+        <h2 class="quiz-title">🦴 Quiz Mode</h2>
+        <span class="quiz-score">Score: <strong id="scoreDisplay">0</strong> / <span id="scoreTotal">5</span></span>
+      </div>
+      <p class="quiz-difficulty" id="quizDifficulty">Level 1 · One-word answer</p>
+      <p class="quiz-question" id="quizQuestion">Select an option to load the first question.</p>
+      <div class="quiz-options" id="quizOptions"></div>
+      <div class="quiz-actions">
+        <button class="btn btn-ghost" id="checkBtn">Check Answer</button>
+        <button class="btn btn-solid" id="nextBtn">Next Question →</button>
+      </div>
+      <p class="quiz-feedback" id="quizFeedback" role="status"></p>
+    </div>
+  </section>
+
+  <section class="credits-section" aria-label="Credits and sources">
+    <div class="credits-card">
+      <h2 class="credits-title">Credits &amp; Sources</h2>
+      <p class="credits-intro">3D model used on this page, reproduced under its original Creative Commons license.</p>
+      <div class="credit-item">
+        <p class="credit-name">"Human humerus" 3D model</p>
+        <p class="credit-meta">by <a href="https://sketchfab.com/ebauer4" target="_blank" rel="nofollow">Eric Bauer</a>, licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="nofollow">CC BY 4.0</a></p>
+        <p class="credit-link"><a href="https://sketchfab.com/3d-models/human-humerus-367fade2e5cb45fea2502faddff64f5f" target="_blank" rel="nofollow">sketchfab.com/3d-models/human-humerus-367fade2e5cb45fea2502faddff64f5f</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>AvenorQ Atlas</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
