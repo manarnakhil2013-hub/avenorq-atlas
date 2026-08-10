@@ -6,6 +6,7 @@ a 3D viewer, an interactive structure list with clinical pearls, and a
 5-question quiz of progressive difficulty. Visual identity follows the
 AvenorQ brand palette (deep navy, purple-tech, violet).
 
+
 ## Project structure
 
 ```
