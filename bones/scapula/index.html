@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AvenorQ Atlas — Interactive Osteology</title>
-<meta name="description" content="Interactive 3D anatomy atlas of the upper and lower limb bones, built for first-year medical students.">
+<title>Scapula — AvenorQ Atlas</title>
+<meta name="description" content="Interactive 3D atlas of the scapula, with clinical pearls and a progressive quiz.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../style.css">
 </head>
 <body>
 
@@ -21,142 +21,88 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <div class="brand">
+    <a class="brand" href="../../index.html">
       <span class="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 60 60"><path d="M30 4 C16 4 6 16 6 30 C6 40 12 47 19 51 C15 56 13 62 15 68 C18 74 26 78 30 80 C34 78 42 74 45 68 C47 62 45 56 41 51 C48 47 54 40 54 30 C54 16 44 4 30 4 Z"/></svg>
       </span>
       <div class="brand-text">
         <span class="brand-title">AvenorQ Atlas</span>
-        <span class="brand-sub">SMART MEDICINE · BETTER FUTURE</span>
+        <span class="brand-sub">SCAPULA · SPINE · ACROMION</span>
       </div>
-    </div>
-    <p class="header-tagline">Interactive 3D osteology atlas — upper &amp; lower limb.</p>
+    </a>
+    <a class="back-link" href="../../index.html">← Back to all bones</a>
   </div>
   <div class="ridge"></div>
 </header>
 
 <main>
 
-  <section class="hub-hero">
-    <h1>Explore the Limb Skeleton</h1>
-    <p>Select a bone to open its dedicated 3D atlas: interactive structures, clinical pearls, and a progressive quiz — content curated for first-year medical students.</p>
-  </section>
+  <section class="atlas-section" aria-label="Anatomical explorer">
+    <div class="atlas-grid">
 
-  <!-- ============ UPPER LIMB ============ -->
-  <section class="limb-section" aria-label="Upper limb bones">
-    <div class="limb-heading">
-      <h2>🦴 Upper Limb — Membrum Superius</h2>
-      <span class="count">8 bones</span>
-    </div>
-    <div class="bone-grid">
+      <nav class="process-rail" aria-label="List of anatomical structures">
+        <h2 class="rail-title">Structures</h2>
+        <ul id="structureList" class="process-list"></ul>
+      </nav>
 
-      <div class="bone-card locked">
-        <p class="bone-card-name">Clavicle</p>
-        <p class="bone-card-latin">Clavicula</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
+      <div class="fossa-panel">
+        <div class="viewer-frame">
+          <div class="sketchfab-embed-wrapper">
+            <iframe title="Human scapula" frameborder="0" allowfullscreen
+              mozallowfullscreen="true" webkitallowfullscreen="true"
+              allow="autoplay; fullscreen; xr-spatial-tracking"
+              xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+              src="https://sketchfab.com/models/0745bbb368b4401db89e73babe440ee8/embed">
+            </iframe>
+          </div>
+          <p class="sketchfab-credit">
+            <a href="https://sketchfab.com/3d-models/human-scapula-0745bbb368b4401db89e73babe440ee8?utm_medium=embed&utm_campaign=share-popup&utm_content=0745bbb368b4401db89e73babe440ee8" target="_blank" rel="nofollow">Human scapula</a>
+            by
+            <a href="https://sketchfab.com/ebauer4?utm_medium=embed&utm_campaign=share-popup&utm_content=0745bbb368b4401db89e73babe440ee8" target="_blank" rel="nofollow">Eric Bauer</a>
+            on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=0745bbb368b4401db89e73babe440ee8" target="_blank" rel="nofollow">Sketchfab</a>
+          </p>
+        </div>
 
-      <a class="bone-card" href="bones/scapula/index.html">
-        <p class="bone-card-name">Scapula</p>
-        <p class="bone-card-latin">Scapula</p>
-        <span class="bone-card-status status-ready">Available</span>
-      </a>
-
-      <a class="bone-card" href="bones/humerus/index.html">
-        <p class="bone-card-name">Humerus</p>
-        <p class="bone-card-latin">Humerus</p>
-        <span class="bone-card-status status-ready">Available</span>
-      </a>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Radius</p>
-        <p class="bone-card-latin">Radius</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Ulna</p>
-        <p class="bone-card-latin">Ulna</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Carpal Bones</p>
-        <p class="bone-card-latin">Ossa Carpi (×8)</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Metacarpal Bones</p>
-        <p class="bone-card-latin">Ossa Metacarpi (×5)</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Phalanges of the Hand</p>
-        <p class="bone-card-latin">Phalanges Manus (×14)</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
+        <div class="description-card" id="descriptionCard">
+          <span class="desc-eyebrow" id="descEyebrow">Selected structure</span>
+          <h3 class="desc-title" id="descTitle">Select a structure to begin</h3>
+          <p class="desc-body" id="descBody">The scapula is a flat, triangular bone forming the posterior part of the shoulder girdle. It anchors the rotator cuff muscles that give the glenohumeral joint its wide range of motion.</p>
+          <div class="pearl-box" id="pearlBox" hidden>
+            <span class="pearl-label">🩺 Clinical Pearl</span>
+            <p class="pearl-text" id="pearlText"></p>
+          </div>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ============ LOWER LIMB ============ -->
-  <section class="limb-section" aria-label="Lower limb bones">
-    <div class="limb-heading">
-      <h2>🦵 Lower Limb — Membrum Inferius</h2>
-      <span class="count">8 bones</span>
+  <section class="quiz-section" aria-label="Quiz mode">
+    <div class="quiz-card">
+      <div class="quiz-head">
+        <h2 class="quiz-title">🦴 Quiz Mode</h2>
+        <span class="quiz-score">Score: <strong id="scoreDisplay">0</strong> / <span id="scoreTotal">5</span></span>
+      </div>
+      <p class="quiz-difficulty" id="quizDifficulty">Level 1 · One-word answer</p>
+      <p class="quiz-question" id="quizQuestion">Select an option to load the first question.</p>
+      <div class="quiz-options" id="quizOptions"></div>
+      <div class="quiz-actions">
+        <button class="btn btn-ghost" id="checkBtn">Check Answer</button>
+        <button class="btn btn-solid" id="nextBtn">Next Question →</button>
+      </div>
+      <p class="quiz-feedback" id="quizFeedback" role="status"></p>
     </div>
-    <div class="bone-grid">
+  </section>
 
-      <div class="bone-card locked">
-        <p class="bone-card-name">Hip Bone</p>
-        <p class="bone-card-latin">Os Coxae</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
+  <section class="credits-section" aria-label="Credits and sources">
+    <div class="credits-card">
+      <h2 class="credits-title">Credits &amp; Sources</h2>
+      <p class="credits-intro">3D model used on this page, reproduced under its original Creative Commons license.</p>
+      <div class="credit-item">
+        <p class="credit-name">"Human scapula" 3D model</p>
+        <p class="credit-meta">by <a href="https://sketchfab.com/ebauer4" target="_blank" rel="nofollow">Eric Bauer</a>, licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="nofollow">CC BY 4.0</a></p>
+        <p class="credit-link"><a href="https://sketchfab.com/3d-models/human-scapula-0745bbb368b4401db89e73babe440ee8" target="_blank" rel="nofollow">sketchfab.com/3d-models/human-scapula-0745bbb368b4401db89e73babe440ee8</a></p>
       </div>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Femur</p>
-        <p class="bone-card-latin">Femur</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Patella</p>
-        <p class="bone-card-latin">Patella</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Tibia</p>
-        <p class="bone-card-latin">Tibia</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Fibula</p>
-        <p class="bone-card-latin">Fibula</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Tarsal Bones</p>
-        <p class="bone-card-latin">Ossa Tarsi (×7)</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Metatarsal Bones</p>
-        <p class="bone-card-latin">Ossa Metatarsi (×5)</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
-
-      <div class="bone-card locked">
-        <p class="bone-card-name">Phalanges of the Foot</p>
-        <p class="bone-card-latin">Phalanges Pedis (×14)</p>
-        <span class="bone-card-status status-soon">Coming soon</span>
-      </div>
-
     </div>
   </section>
 
@@ -166,5 +112,7 @@
   <p>AvenorQ Atlas</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
+
